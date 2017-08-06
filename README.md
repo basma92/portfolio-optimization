@@ -1,4 +1,17 @@
 ## Website Performance Optimization portfolio project
+# steps to make the pagespeed score more than 90
+[i have used this site]( https://gtmetrix.com/) and followed the steps 
+1.scaled the pizzeria image
+2.optimized the profile and pizzaria images
+3.added the media attribute "print" to the print css style sheet
+4.put the javacscripts at the end of the page
+5.add the async attribute tojs
+9.specify image dimensions 
+10.minified js and print.css
+11.inline javascript
+## steps to acheive the 60 fps
+i have followed the webcasts
+1.
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
 

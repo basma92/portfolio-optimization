@@ -539,6 +539,9 @@ document.addEventListener('DOMContentLoaded', function() {
   var s = 256;
   //used getelement by id instead of query selector asit is faster.moved it outside the loop not to render the page at each time the loopis done
   var basma2 = document.getElementById("movingPizzas1");
+  //i have reduced the num of pizzas that will be animated because  i will only see ahandful of them
+  //i just need your opinion  mr. reviewer if there is an efficient way to reduce this number 
+  //as i just reduced them not to take that time not on a consept .
   for (var i = 0; i < 50; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';

@@ -451,7 +451,7 @@ var resizePizzas = function(size) {
 
   // Iterates through pizza elements on the page and changes their widths
   function changePizzaSizes(size) {
-    //i have concluded this function from the life help to be able to do the calc out side the for lop
+    //i have updated this function from the life help to be able to do the calc out side the for lop
     var dx = determineDx(document.getElementsByClassName("randomPizzaContainer")[0], size); 
   var newwidth = (document.getElementsByClassName("randomPizzaContainer")[0].offsetWidth + dx) + 'px';
   for (var i = 0; i < pizzaContainerValue.length; i++)

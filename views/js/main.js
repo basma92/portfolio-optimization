@@ -539,7 +539,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var s = 256;
   //used getelement by id instead of query selector asit is faster.moved it outside the loop not to render the page at each time the loopis done
   var basma2 = document.getElementById("movingPizzas1");
-  for (var i = 0; i < 200; i++) {
+  for (var i = 0; i < 50; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";

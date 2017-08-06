@@ -451,17 +451,21 @@ var resizePizzas = function(size) {
 
   // Iterates through pizza elements on the page and changes their widths
   function changePizzaSizes(size) {
-    
+    //i have concluded this function from the life help to be able to do the calc out side the for lop
+    var dx = determineDx(document.getElementsByClassName("randomPizzaContainer")[0], size); 
+  var newwidth = (document.getElementsByClassName("randomPizzaContainer")[0].offsetWidth + dx) + 'px';
+  for (var i = 0; i < pizzaContainerValue.length; i++)
+  { pizzaContainerValue[i].style.width = newwidth; } 
    // used getElementsByClassName instead of using querySelectorAll
     // for (var i = 0; i < document.querySelectorAll(".randomPizzaContainer").length; i++) {
      // var dx = determineDx(document.querySelectorAll(".randomPizzaContainer")[i], size);
       //var newwidth = (document.querySelectorAll(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';
       //document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;
-     for (var i = 0; i < document.getElementsByClassName("randomPizzaContainer").length; i++) {
-    var dx = determineDx(document.getElementsByClassName("randomPizzaContainer")[i], size);
-      var newwidth = (document.getElementsByClassName("randomPizzaContainer")[i].offsetWidth + dx) + 'px';
-      document.getElementsByClassName("randomPizzaContainer")[i].style.width = newwidth;
-  }
+     //for (var i = 0; i < document.getElementsByClassName("randomPizzaContainer").length; i++) {
+   // var dx = determineDx(document.getElementsByClassName("randomPizzaContainer")[i], size);
+     // var newwidth = (document.getElementsByClassName("randomPizzaContainer")[i].offsetWidth + dx) + 'px';
+      //document.getElementsByClassName("randomPizzaContainer")[i].style.width = newwidth;
+  //}
   }
 
   changePizzaSizes(size);
@@ -512,6 +516,7 @@ function updatePositions() {
  //var items = document.querySelectorAll('.mover');
   var items = document.getElementsByClassName("mover");
   var basma = document.body.scrollTop / 1250;
+
   for (var i = 0; i < items.length; i++) {
     var phase = Math.sin((basma) + (i % 5));
    //after using consol.log as mentioned in the webcasts i found that document.body.scrollTop /1250 is the same num each time so there

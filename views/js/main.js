@@ -509,9 +509,12 @@ function updatePositions() {
 //here faster way than querySelectorAll=getelement by classname using google search and this website"https://www.w3schools.com/jsref/met_document_getelementsbyclassname.asp"
  //var items = document.querySelectorAll('.mover');
   var items = document.getElementsByClassName("mover");
+  var basma = document.body.scrollTop / 1250;
   for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
-    console.log(phase, document.body.scrollTop /1250);
+    var phase = Math.sin((basma) + (i % 5));
+   //after using consol.log as mentioned in the webcasts i found that document.body.scrollTop /1250 is the same num each time so there
+    //is no need to render the page at each time the loop is done so i need to move it out of the loop and call it once
+    // console.log(phase, document.body.scrollTop /1250);
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
 

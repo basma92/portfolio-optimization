@@ -1,5 +1,5 @@
 ## Website Performance Optimization portfolio project
-# steps to make the pagespeed score more than 90
+# steps to make the pagespeed score more than 90 in main.html
 [i have used this site]( https://gtmetrix.com/) and followed the steps 
 1.scaled the pizzeria image
 2.optimized the profile and pizzaria images
@@ -11,7 +11,11 @@
 11.inline javascript
 ## steps to acheive the 60 fps
 i have followed the webcasts
-1.
+1.i have replaced allthe"query selector" with getElementBy "id or class name " as it is faster
+2.in the updatePositions() ,i mhave moved the"document.body.scrollTop / 1250"out of the for loop,so itis done once then called inside the loop
+3.in the event listener "scroll" i have moved the "document.getElementById("movingPizzas1")" out side the for loop to call it once not at each loop itteration 
+4.i reduced the number of pizzas to 50 instead of 200 not to take that time 
+5.
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
 

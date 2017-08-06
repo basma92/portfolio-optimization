@@ -10,9 +10,9 @@
 10.minified js and print.css
 11.inline javascript
 ## optimizations in the main .js
-i have followed the webcasts
+i have used the help of the webcasts the 
 1.i have replaced allthe"query selector" with getElementBy "id or class name " as it is faster
-2.in the updatePositions() ,i mhave moved the"document.body.scrollTop / 1250"out of the for loop,so it is done once then called inside the loop
+2.in the updatePositions() ,i mhave moved the"document.body.scrollTop / 1250"out of the for loop,so it is done once then called inside the loop/*i updated this i moved the (i%5)also out side the for loop as it is only 5 numbers  
 3.in the event listener "scroll" i have moved the "document.getElementById("movingPizzas1")" out side the for loop to call it once not at each loop itteration 
 4.i reduced the number of pizzas to 50 instead of 200 not to take that time 
 5.moved the calculations of dx and newWidth out side the for loop not to do it  at each itterationwith the help of the livehelp of udacity

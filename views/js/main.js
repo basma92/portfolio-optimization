@@ -516,6 +516,7 @@ function updatePositions() {
  //var items = document.querySelectorAll('.mover');
   var items = document.getElementsByClassName("mover");
   //var basma = document.body.scrollTop / 1250;
+  //i have updated this function with the help of webcasts and this project"https://github.com/talongi/udacity-p4-website-optimization.git"  
   var phase = [];
   for (var b=1; b<=5;b++){
     phase.push(Math.sin((document.body.scrollTop / 1250) + (b % 5)));
@@ -527,7 +528,7 @@ function updatePositions() {
    //after using consol.log as mentioned in the webcasts i found that document.body.scrollTop /1250 is the same num each time so there
     //is no need to render the page at each time the loop is done so i need to move it out of the loop and call it once
     // console.log(phase, document.body.scrollTop /1250);
-    items[i].style.left = items[i].basicLeft + 100 * phase[i%5] + 'px';
+    items[i].style.left = items[i].basicLeft + 100 * phase[(i % 5)] + 'px';
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
@@ -551,8 +552,8 @@ document.addEventListener('DOMContentLoaded', function() {
   var basma2 = document.getElementById("movingPizzas1");
   //i have reduced the num of pizzas that will be animated because  i will only see ahandful of them
   //i just need your opinion  mr. reviewer if there is an efficient way to reduce this number 
-  //as i just reduced them not to take that time not on a consept .
-  for (var i = 0; i < 50; i++) {
+  //as i just reduced them not to take that time but the number isn't chosen to a specific consept .
+  for (var i = 0; i < 25; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";

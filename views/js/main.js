@@ -452,9 +452,12 @@ var resizePizzas = function(size) {
   // Iterates through pizza elements on the page and changes their widths
   function changePizzaSizes(size) {
     //i have updated this function from the life help to be able to do the calc out side the for lop
-    var dx = determineDx(document.getElementsByClassName("randomPizzaContainer")[0], size); 
-  var newwidth = (document.getElementsByClassName("randomPizzaContainer")[0].offsetWidth + dx) + 'px';
-  for (var i = 0; i < pizzaContainerValue.length; i++)
+    //updated requirement the value pizzaContainerValue wasn't declared
+   var pizzaContainerValue = document.getElementsByClassName("randomPizzaContainer");
+    var dx = determineDx(pizzaContainerValue[0], size); 
+  var newwidth = (pizzaContainerValue[0].offsetWidth + dx) + 'px';
+    //sugg. add "len"
+  for (var i = 0 , len =pizzaContainerValue.length; i < pizzaContainerValue.length; i++)
   { pizzaContainerValue[i].style.width = newwidth; } 
    // used getElementsByClassName instead of using querySelectorAll
     // for (var i = 0; i < document.querySelectorAll(".randomPizzaContainer").length; i++) {
@@ -480,8 +483,10 @@ var resizePizzas = function(size) {
 window.performance.mark("mark_start_generating"); // collect timing data
 
 // This for-loop actually creates and appends all of the pizzas when the page loads
-for (var i = 2; i < 100; i++) {
+//sugg declar pizzaDiv out side so only dom call is made once
   var pizzasDiv = document.getElementById("randomPizzas");
+for (var i = 2; i < 100; i++) {
+//  var pizzasDiv = document.getElementById("randomPizzas");
   pizzasDiv.appendChild(pizzaElementGenerator(i));
 }
 
@@ -554,7 +559,9 @@ document.addEventListener('DOMContentLoaded', function() {
   //i just need your opinion  mr. reviewer if there is an efficient way to reduce this number 
   //as i just reduced them not to take that time but the number isn't chosen to a specific consept .
   for (var i = 0; i < 25; i++) {
-    var elem = document.createElement('img');
+    // notice this sugg Declaring the elem variable (var elem;) in the initialisation of the for-loop will prevent it from being created every time the loop is executed.
+    //var elem = document.createElement('img');
+    elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
     elem.style.height = "100px";

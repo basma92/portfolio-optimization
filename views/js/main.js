@@ -558,6 +558,13 @@ document.addEventListener('DOMContentLoaded', function() {
   //i have reduced the num of pizzas that will be animated because  i will only see ahandful of them
   //i just need your opinion  mr. reviewer if there is an efficient way to reduce this number 
   //as i just reduced them not to take that time but the number isn't chosen to a specific consept .
+ //SUGGESTION to take in mind "important"
+//Your idea is good. However, a better approach is to calculate dynamically the number of pizzas needed to fill the screen, based on browser window resolution.
+//You could use the inner.height properties to calculate the required number of pizzas.
+//References
+//https://developer.mozilla.org/en-US/docs/Web/API/Window/innerHeight
+//http://api.jquery.com/innerheight/
+//HINT: numberOfPizzas = height / s * cols
   for (var i = 0; i < 25; i++) {
     // notice this sugg Declaring the elem variable (var elem;) in the initialisation of the for-loop will prevent it from being created every time the loop is executed.
     //var elem = document.createElement('img');

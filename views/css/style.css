@@ -28,7 +28,16 @@ form {
 #pizzaSize {
   font-weight: 800;
 }
-
+/*thank you very much  for your suggestions*/
+/*SUGGESTION to take in mind as i don't uderstand it but i will research for it,but i don't have time  
+You can increase your sites performance with hardware accelerated CSS. The GPU can be trigger by simply including the transform: translateZ(0); declaration. Furthermore, adding the backface-visibility property with the hidden value can make a huge difference in no so powerful equipments as it enables hardware acceleration.
+Both properties should be applied on this class selector.
+References
+https://developer.mozilla.org/en-US/docs/Web/CSS/transform
+http://blog.teamtreehouse.com/increase-your-sites-performance-with-hardware-accelerated-css
+https://css-tricks.com/almanac/properties/b/backface-visibility/
+http://designmodo.com/backface-visibility-css-animation/
+p.s. Remember to add the vendor prefixes and comment the change in the README file.*/
 .mover {
   position: fixed;
   width: 256px;
